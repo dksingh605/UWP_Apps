@@ -133,7 +133,8 @@
     </Compile>
     <Compile Include="Models\JsonDataModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\DataRpositories.cs" />
+    <Compile Include="Repositories\ContainerRepositories.cs" />
+    <Compile Include="Repositories\DataReositories.cs" />
     <Compile Include="Repositories\JsonAsDbRepository.cs" />
   </ItemGroup>
   <ItemGroup>
