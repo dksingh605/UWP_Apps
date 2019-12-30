@@ -1,0 +1,2 @@
+MainPackage=F:\Dharmendra\Obvus\UsingUwp\UWP_Pocs\JsonDbDemo\JsonDbDemo\bin\x64\Release\JsonDbDemo_1.0.1.0_x64.msix
+SymbolPackage=F:\Dharmendra\Obvus\UsingUwp\UWP_Pocs\JsonDbDemo\JsonDbDemo\obj\x64\Release\Symbols\JsonDbDemo_1.0.1.0_x64.appxsym
