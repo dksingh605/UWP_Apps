@@ -75,7 +75,7 @@ namespace JsonDbDemo.Repositories
 
 			StorageFile myFile = await localFolder.GetFileAsync(FileName);
 			string initialJsonString = JsonConvert.SerializeObject(jsonDataModel);
-			_logger.Information("data after serilization"+initialJsonString);
+			//_logger.Information("data after serilization"+initialJsonString);
 			await FileIO.WriteTextAsync(myFile, initialJsonString);
 			result.IsDbCreated = true;
 			_logger.Information("DB Updated!!!!!!!!");
@@ -103,8 +103,8 @@ namespace JsonDbDemo.Repositories
 			_logger.Information("saved data was::" + userDataString);
 
 
-			var f = JsonConvert.DeserializeObject<JsonDataModel>(userDataString);
-			_logger.Information("fetched data after convert" + f);
+			//var f = JsonConvert.DeserializeObject<JsonDataModel>(userDataString);
+			//_logger.Information("fetched data after convert" + f);
 			return JsonConvert.DeserializeObject<JsonDataModel>(userDataString);
 		}
 		public async static Task<string> GetUserData(string userName = "admin")
@@ -115,7 +115,7 @@ namespace JsonDbDemo.Repositories
 			//userDataString = _localSettings.Values[userName].ToString();
 
 			userDataString = await FileIO.ReadTextAsync(await ApplicationData.Current.LocalFolder.GetFileAsync(userName + "_data.json"));
-			_logger.Information("saved data was::" + userDataString);
+			//_logger.Information("saved data was::" + userDataString);
 			return userDataString;
 
 			

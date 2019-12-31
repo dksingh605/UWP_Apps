@@ -2,6 +2,7 @@
 using JsonDbDemo.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -33,8 +34,10 @@ namespace JsonDbDemo
 		
 		private async void btn_getJsonData_Click(object sender, RoutedEventArgs e)
 		{
-		   
-			this.ShowMessage(await JsonAsDbRepository.GetUserData("stephan"));
+			var f = await JsonAsDbRepository.GetUserData("stephan");
+		
+			Debug.WriteLine(f.ToString());
+			this.ShowMessage(f.ToString());
 		}
 
 		private async void btn_saveInLocalGet_Click(object sender, RoutedEventArgs e)
